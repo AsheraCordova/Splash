@@ -102,8 +102,8 @@ public class SplashScreen extends org.apache.cordova.CordovaPlugin {
 	}
 
 	private void updateBounds() {
-		int y = parent.getBounds().height - parent.getClientArea().height;
-		shell.setBounds(parent.getLocation().x + 10, parent.getLocation().y + y - 6,
+		int borderSize = 2;
+		shell.setBounds(parent.toDisplay(0, 0).x + borderSize, parent.toDisplay(0, 0).y + borderSize,
 				com.ashera.widget.PluginInvoker.getScreenWidth(), com.ashera.widget.PluginInvoker.getScreenHeight());
 	}
 
